@@ -18,6 +18,10 @@ def index():
 def moreinfo():
     return render_template('moreinfo.html')
 
+@app.route("/dashboard", methods = ["GET", "POST"])
+def dashboard():
+    return render_template('dashboard.html')
+
 @app.route("/predict", methods = ["GET", "POST"])
 def predict():
     return render_template('predict.html')
