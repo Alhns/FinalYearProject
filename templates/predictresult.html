@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+        <!-- Use Flask url_for to reference static files -->
+    <link rel="shortcut icon" type="image/jpg" href="static/images/banner_1.png" />
+    <link rel="stylesheet" type="text/css" href="static/css/predictresult.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <br><br><br><br><br><br>
+    <section class="result"></section>
+
+    <!-- Display output if available -->
+    {% if output is defined and output|length %}
+    <div class="col-md-12 text-center">
+        <h2>{{ output }}</h2>
+    </div>
+    <br>
+    {% else %}
+    <br>
+    {% endif %}
+    </section>
+
+    <!-- Navigation using url_for -->
+    <div class="Btn">
+        <a href="/"><span></span>Home</a>
+        <a href="/predict"><span></span>PREDICT</a>
+        <a href="/moreinfo"><span></span>MORE INFO</a>
+        <a href="https://app.powerbi.com/groups/me/reports/ff2c3da3-07f4-4a6f-b843-0b6aa642ffa8?ctid=cdcbb0e2-9fea-4f54-8670-672707797ada&pbi_source=linkShare"><span></span>DASHBOARD</a>
+    </div>
+
+    <section id="footer">
+        <div class="social-links">
+            <a href="https://github.com/Alhns" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:alhanis1605@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/al.hns/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <p>&copy; Copyright 2024 Alhanis Nazri</p>
+
+        </div>
+    </section>
+</body>
+
+</html>
