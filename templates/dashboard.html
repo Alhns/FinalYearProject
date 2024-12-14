@@ -10,11 +10,41 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
+        /* Reset all elements to remove inherent margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Section */
+        header {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainheader {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Main Section */
+        main {
+            margin-top: 0; /* No gap between header and main */
+            padding: 10px 20px; /* Small padding for layout */
+        }
+
+        /* Adjust h1 spacing */
+        h1 {
+            margin: 10px 0;
+            text-align: center;
+        }
+
         iframe {
             border: none;
             border-radius: 10px;
             display: block;
-            margin: 20px auto;
+            margin: 10px auto;
         }
     </style>
 </head>
@@ -37,6 +67,9 @@
                         </ul>
                     </div>
                     <span class="navTrigger">
+                        <i></i>
+                        <i></i>
+                        <i></i>
                     </span>
                 </div>
             </nav>
@@ -45,8 +78,8 @@
     </header>
 
     <main>
-        <h1 class="text-center">Power BI Dashboard</h1>
-        <iframe title="FYP FINAL" width="1024" height="804"
+        <h1>Power BI Dashboard</h1>
+        <iframe title="FYP FINAL" width="800" height="500" 
             src="https://app.powerbi.com/view?r=eyJrIjoiYjYzN2UwZjUtMWVhNy00YjBiLTkxNzMtZGJmZDE2MTBmYjhjIiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D" 
             allowFullScreen="true"></iframe>
     </main>
