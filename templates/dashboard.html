@@ -10,15 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        header {
-            margin-bottom: 0; /* Remove extra space below the header */
-        }
-
-        main {
-            margin-top: -20px; /* Pull the main section closer to the header */
-            padding: 20px; /* Optional: Add padding for better spacing */
-        }
-
         iframe {
             border: none;
             border-radius: 10px;
@@ -46,9 +37,6 @@
                         </ul>
                     </div>
                     <span class="navTrigger">
-                        <i></i>
-                        <i></i>
-                        <i></i>
                     </span>
                 </div>
             </nav>
@@ -66,4 +54,24 @@
     <section id="footer">
         <div class="social-links">
             <a href="https://github.com/Alhns" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="mailto:alhanis1605@gmail.com" target="_blank"><i class="fa
+            <a href="mailto:alhanis1605@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/al.hns/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <p>&copy; Copyright 2024 Alhanis Nazri</p>
+        </div>
+    </section>
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
+
+</html>
