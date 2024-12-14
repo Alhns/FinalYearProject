@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
     <style>
         /* Reset all elements to remove inherent margins */
         * {
@@ -24,61 +23,28 @@
             padding: 0;
         }
 
-        /* Navigation bar styling */
-        .nav {
-            position: fixed; /* Ensures the navbar is fixed to the top */
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000; /* Keeps it above other content */
-            background-color: #fff; /* Ensure navbar background is visible */
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for separation */
+        .mainheader {
+            padding: 0;
+            margin: 0;
         }
 
         /* Main Section */
         main {
-            margin-top: 80px; /* Pushes the content down to account for the fixed navbar height */
+            margin-top: 0; /* No gap between header and main */
             padding: 10px 20px; /* Small padding for layout */
-            text-align: center; /* Centers the dashboard content */
         }
 
         /* Adjust h1 spacing */
         h1 {
-            margin: 20px 0; /* Adds breathing room above and below the title */
+            margin: 10px 0;
             text-align: center;
         }
 
-        /* Iframe for embedding Power BI */
         iframe {
             border: none;
             border-radius: 10px;
             display: block;
             margin: 10px auto;
-        }
-
-        /* Footer Styling */
-        #footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 20px 0;
-            background-color: #f1f1f1;
-        }
-
-        .social-links a {
-            margin: 0 10px;
-            color: #333;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        .social-links a:hover {
-            color: #007bff;
-        }
-
-        .social-links p {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #666;
         }
     </style>
 </head>
@@ -86,15 +52,16 @@
 <body>
     <header>
         <div class="mainheader">
+
             <nav class="nav">
                 <div class="container">
                     <div class="logo">
-                        <img src="static/images/banner_1.png" alt="Banner">
+                        <img src="static/images/banner_1.png">
                     </div>
                     <div id="mainListDiv" class="main_list">
                         <ul class="navlinks">
                             <li><a href="/">Home</a></li>
-                            <li><a href="mailto:alhanis1605@gmail.com" target="_blank">Contact</a></li>
+                            <li><a href="mailto: alhanis1605@gmail.com" target="_blank">Contact</a></li>
                             <li><a href="/predict">Predict</a></li>
                             <li><a href="/moreinfo">More Info</a></li>
                         </ul>
@@ -106,12 +73,13 @@
                     </span>
                 </div>
             </nav>
+
         </div>
     </header>
 
     <main>
         <h1>Power BI Dashboard</h1>
-        <iframe title="FYP FINAL" width="1100" height="500" 
+        <iframe title="FYP FINAL" width="1000" height="550" 
             src="https://app.powerbi.com/view?r=eyJrIjoiYjYzN2UwZjUtMWVhNy00YjBiLTkxNzMtZGJmZDE2MTBmYjhjIiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D" 
             allowFullScreen="true"></iframe>
     </main>
@@ -128,7 +96,7 @@
     <!-- Jquery needed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             if ($(document).scrollTop() > 50) {
                 $('.nav').addClass('affix');
                 console.log("OK");
